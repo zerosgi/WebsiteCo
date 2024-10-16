@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vistomail.com offers top-tier web development services, specializing in SEO-optimized and mobile-responsive websites for businesses across the country. Trusted by local and national brands.">
+    <meta name="keywords" content="Vistomail, web development, SEO services, mobile responsive websites, custom websites, blockchain development, mobile app development, professional web design">
+    <meta name="author" content="Vistomail.com">
+    <title>Vistomail | Web, Blockchain, & Mobile App Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #111;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+
+        h1, h2 {
+            color: #fff;
+        }
+
+        .logo {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+
+        .btn-buy {
+            background-color: #00aaff;
+            color: #000;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .btn-buy:hover {
+            background-color: #0077cc;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .pricing-table th, .pricing-table td {
+            border: 1px solid #333;
+            padding: 15px;
+        }
+
+        .pricing-table th {
+            background-color: #00aaff;
+            color: #000;
+        }
+
+        .pricing-table td {
+            background-color: #222;
+        }
+
+        .contact-info {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <img src="gecko.png" alt="Vistomail Logo" class="logo">
+
+    <div class="container">
+        <h1>Vistomail.com</h1>
+        <p><strong>Empowering businesses with custom websites, blockchain development, and mobile app solutions.</strong></p>
+
+        <!-- Pricing for Website Packages -->
+        <h2>Website Development Packages</h2>
+        <table class="pricing-table">
+            <tr>
+                <th>Package</th>
+                <th>Price</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>1-Page Website</td>
+                <td>$500</td>
+                <td>SEO optimized, mobile-responsive, delivered in 4 hours.</td>
+            </tr>
+            <tr>
+                <td>Standard Website</td>
+                <td>$2,500</td>
+                <td>Up to 5 custom pages, SEO-optimized, mobile-responsive design.</td>
+            </tr>
+            <tr>
+                <td>Premium Website</td>
+                <td>$5,000</td>
+                <td>10+ pages, advanced SEO, branding services, and mobile-first design.</td>
+            </tr>
+        </table>
+        <a class="btn-buy" href="#" onclick="createInvoice(500)">Buy 1-Page Website for $500</a>
+        <a class="btn-buy" href="#" onclick="createInvoice(2500)">Buy Standard Website for $2,500</a>
+        <a class="btn-buy" href="#" onclick="createInvoice(5000)">Buy Premium Website for $5,000</a>
+
+        <!-- Pricing for Blockchain Development -->
+        <h2>Blockchain Development Packages</h2>
+        <table class="pricing-table">
+            <tr>
+                <th>Package</th>
+                <th>Price Range</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Basic Blockchain Development</td>
+                <td>$25,000 - $50,000</td>
+                <td>Custom blockchain development for small-scale use cases.</td>
+            </tr>
+            <tr>
+                <td>Enterprise Blockchain Development</td>
+                <td>$50,000 - $150,000</td>
+                <td>Full-scale blockchain implementation for enterprise systems.</td>
+            </tr>
+            <tr>
+                <td>Complete Blockchain Ecosystem</td>
+                <td>$150,000 - $250,000</td>
+                <td>Development of a full blockchain network with dApps and integrations.</td>
+            </tr>
+        </table>
+        <a class="btn-buy" href="#" onclick="createInvoice(25000)">Start Blockchain Project ($25,000+)</a>
+
+        <!-- Pricing for Mobile App Development -->
+        <h2>Mobile App Development Packages</h2>
+        <table class="pricing-table">
+            <tr>
+                <th>Package</th>
+                <th>Starting Price</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Basic Mobile App</td>
+                <td>$10,000</td>
+                <td>Cross-platform mobile app for simple use cases.</td>
+            </tr>
+            <tr>
+                <td>Standard Mobile App</td>
+                <td>$20,000</td>
+                <td>Advanced mobile app with custom features and integrations.</td>
+            </tr>
+            <tr>
+                <td>Premium Mobile App</td>
+                <td>$30,000</td>
+                <td>Enterprise-grade mobile app with advanced functionality.</td>
+            </tr>
+        </table>
+        <a class="btn-buy" href="#" onclick="createInvoice(10000)">Start Mobile App Project ($10,000+)</a>
+
+        <!-- Contact info -->
+        <div class="contact-info">
+            <p>Need help? Call us at: 980-946-0582</p>
+        </div>
+    </div>
+
+    <script>
+        // NowPayments API for invoice creation
+        async function createInvoice(amount) {
+            try {
+                const response = await fetch('https://api.nowpayments.io/v1/invoice', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'x-api-key': 'RH6NN9M-D4Z4PMT-JB9HSF9-WVZ7Y57',
+                    },
+                    body: JSON.stringify({
+                        price_amount: amount,
+                        price_currency: 'USD',
+                        pay_currency: 'DOGE',
+                        order_id: 'Vistomail_Invoice_' + amount,
+                        order_description: 'Vistomail service payment',
+                        success_url: 'https://vistomail.com/success', // Replace with your actual success page
+                        cancel_url: 'https://vistomail.com/cancel',  // Replace with your actual cancel page
+                    })
+                });
+
+                const data = await response.json();
+                if (data.invoice_url) {
+                    window.location.href = data.invoice_url; // Redirect to NowPayments
+                } else {
+                    alert('Failed to create invoice. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error creating invoice:', error);
+                alert('An error occurred. Please try again later.');
+            }
+        }
+    </script>
+
+</body>
+</html>
