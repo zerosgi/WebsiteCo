@@ -60,11 +60,6 @@
             color: #3d87ff;
             text-decoration: none;
         }
-        .copy-text {
-            color: #aaa;
-            font-size: 14px;
-            margin-top: 10px;
-        }
         button {
             background-color: #3d87ff;
             color: white;
@@ -125,10 +120,9 @@
         <p>Join the movement to reshape democracy and build a future that empowers people through technology and freedom. Project X is here to address the crises we face—famine, financial instability, and environmental decay—and provide real solutions for lasting change. With your support, we can launch Project X and bring hope back to the people.</p>
 
         <p>Project X is ready to go operational under this Raptoreum address:</p>
-        <div class="raptoreum-address" id="rapt-address" onclick="copyToClipboard()">
+        <div class="raptoreum-address">
             <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" target="_blank">RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1</a>
         </div>
-        <div class="copy-text">Click to copy the address</div>
         
         <iframe src="https://nowpayments.io/embeds/donation-widget?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F" width="348" height="623" frameborder="0" scrolling="no" style="overflow-y: hidden;">
             Can't load widget
@@ -141,16 +135,13 @@
 
     <div class="footer">
         <p>TRUMP VANCE 2024 | America needs leadership to restore opportunities for all. Legalizing cannabis and building infrastructure are key to America's revival.</p>
-        <p>Elon and Trump, can I have your support to release Project X? I also request @satoshi handles on Truth Social and X to share updates and build the future with Raptoreum and Geckocoin.</p>
+        <p>Elon and Trump, can I have your support to release Project X? I also request @satoshi handles on Truth Social and X to share updates, and while I don't need control of them, I would like a way to send updates about Project X.</p>
+        <p>Visit the <a href="https://bitcointalk.org/index.php?topic=5507368.0" target="_blank" style="color: #3d87ff;">Project X Bitcointalk thread</a> for more information.</p>
+        <p>Learn more about Raptoreum at <a href="https://raptoreum.com" target="_blank" style="color: #3d87ff;">raptoreum.com</a>.</p>
     </div>
 
     <script>
-        function copyToClipboard() {
-            const address = 'RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1';
-            navigator.clipboard.writeText(address).then(() => {
-                alert('Raptoreum address copied to clipboard: ' + address);
-            });
-        }
+        // Removed the copy address functionality as requested
     </script>
 </body>
 </html>
