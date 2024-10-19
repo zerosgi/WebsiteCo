@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Project X aims to redefine the future through technology and freedom. Support Project X by donating cryptocurrency to help launch this innovative movement.">
-    <meta name="keywords" content="Project X, cryptocurrency, donation, freedom, Raptoreum, Ghostrider, Elon Musk, Donald Trump, political movement, future technologies, innovation, blockchain">
+    <meta name="keywords" content="Project X, cryptocurrency, donation, freedom, Raptoreum, Ghostrider, Elon Musk, Donald Trump, WLFI, political movement, future technologies, innovation, blockchain">
     <meta name="author" content="Project X Team">
     <title>Support Project X | Redefining the Future</title>
     <style>
@@ -22,9 +22,10 @@
         }
         .container {
             text-align: center;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 20px;
             padding: 20px;
+            width: 90%;
         }
         h1 {
             font-size: 48px;
@@ -60,6 +61,11 @@
             color: #3d87ff;
             text-decoration: none;
         }
+        .copy-text {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 10px;
+        }
         button {
             background-color: #3d87ff;
             color: white;
@@ -84,6 +90,12 @@
         .footer p {
             margin-bottom: 10px;
         }
+        /* Centering the widget and buttons */
+        .donation-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         /* Mobile responsive adjustments */
         @media (max-width: 768px) {
             h1 {
@@ -98,6 +110,7 @@
             }
             .container {
                 padding: 15px;
+                width: 95%;
             }
         }
         @media (max-width: 480px) {
@@ -111,6 +124,27 @@
                 padding: 10px 20px;
                 font-size: 12px;
             }
+            .container {
+                padding: 15px;
+                width: 100%;
+            }
+        }
+        /* Desktop styles */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 800px;
+                padding: 40px;
+            }
+            h1 {
+                font-size: 56px;
+            }
+            p {
+                font-size: 20px;
+            }
+            button {
+                padding: 16px 32px;
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -120,28 +154,39 @@
         <p>Join the movement to reshape democracy and build a future that empowers people through technology and freedom. Project X is here to address the crises we face—famine, financial instability, and environmental decay—and provide real solutions for lasting change. With your support, we can launch Project X and bring hope back to the people.</p>
 
         <p>Project X is ready to go operational under this Raptoreum address:</p>
-        <div class="raptoreum-address">
+        <div class="raptoreum-address" id="rapt-address" onclick="copyToClipboard()">
             <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" target="_blank">RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1</a>
         </div>
-        
-        <iframe src="https://nowpayments.io/embeds/donation-widget?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F" width="348" height="623" frameborder="0" scrolling="no" style="overflow-y: hidden;">
-            Can't load widget
-        </iframe>
+        <div class="copy-text">Click to copy the address</div>
 
-        <a href="https://nowpayments.io/payment/?iid=5823025874">
-            <button>Donate to Support Project X</button>
-        </a>
+        <p>Trump, your token is ready to deploy with the ticker symbols: <strong>TRUMP</strong>, <strong>DONALD TRUMP</strong>.</p>
+        <p>Elon, your token is also ready with the ticker symbols: <strong>ELON</strong>, <strong>TSLA</strong>, <strong>TESLA</strong>.</p>
+        <p>We also introduce <strong>One World Liberty Financial (WLFI)</strong>, a new token to drive global financial liberty and fairness.</p>
+        <p>View these tokens and more at <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" target="_blank">Project X Raptoreum Explorer</a>.</p>
+
+        <div class="donation-container">
+            <iframe src="https://nowpayments.io/embeds/donation-widget?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F" width="348" height="623" frameborder="0" scrolling="no" style="overflow-y: hidden;">
+                Can't load widget
+            </iframe>
+
+            <a href="https://nowpayments.io/payment/?iid=5823025874">
+                <button>Donate to Support Project X</button>
+            </a>
+        </div>
     </div>
 
     <div class="footer">
         <p>TRUMP VANCE 2024 | America needs leadership to restore opportunities for all. Legalizing cannabis and building infrastructure are key to America's revival.</p>
-        <p>Elon and Trump, can I have your support to release Project X? I also request @satoshi handles on Truth Social and X to share updates, and while I don't need control of them, I would like a way to send updates about Project X.</p>
-        <p>Visit the <a href="https://bitcointalk.org/index.php?topic=5507368.0" target="_blank" style="color: #3d87ff;">Project X Bitcointalk thread</a> for more information.</p>
-        <p>Learn more about Raptoreum at <a href="https://raptoreum.com" target="_blank" style="color: #3d87ff;">raptoreum.com</a>.</p>
+        <p>Elon and Trump, can I have your support to release Project X? I also request @satoshi handles on Truth Social and X to share updates and build the future with Raptoreum, Geckocoin, and One World Liberty Financial (WLFI).</p>
     </div>
 
     <script>
-        // Removed the copy address functionality as requested
+        function copyToClipboard() {
+            const address = 'RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1';
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Raptoreum address copied to clipboard: ' + address);
+            });
+        }
     </script>
 </body>
 </html>
