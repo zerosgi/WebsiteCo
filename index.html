@@ -96,6 +96,14 @@
             flex-direction: column;
             align-items: center;
         }
+        /* Package button styles */
+        .donation-package {
+            margin: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            text-align: center;
+        }
         /* Mobile responsive adjustments */
         @media (max-width: 768px) {
             h1 {
@@ -151,28 +159,42 @@
 <body>
     <div class="container">
         <h1>Project X: Redefining the Future</h1>
-        <p>Join the movement to reshape democracy and build a future that empowers people through technology and freedom. Project X is here to address the crises we face—famine, financial instability, and environmental decay—and provide real solutions for lasting change. With your support, we can launch Project X and bring hope back to the people.</p>
+        <p>Join the movement to reshape democracy and build a future that empowers people through technology and freedom. With your support, we can launch Project X and bring hope back to the people.</p>
 
-        <p>Project X is ready to go operational under this Raptoreum address:</p>
+        <p>Support us by donating and get an airdrop of our tokens:</p>
+
+        <!-- Donation Packages -->
+        <div class="donation-package">
+            <h2>Starter Supporter</h2>
+            <p>Donate $10 and receive 10 tokens.</p>
+            <a href="https://nowpayments.io/payment/?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F&amount=10" target="_blank" rel="noreferrer noopener">
+                <button>Donate $10</button>
+            </a>
+        </div>
+
+        <div class="donation-package">
+            <h2>Core Supporter</h2>
+            <p>Donate $25 and receive 20 tokens.</p>
+            <a href="https://nowpayments.io/payment/?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F&amount=25" target="_blank" rel="noreferrer noopener">
+                <button>Donate $25</button>
+            </a>
+        </div>
+
+        <div class="donation-package">
+            <h2>Elite Supporter</h2>
+            <p>Donate $50 and receive 30 tokens.</p>
+            <a href="https://nowpayments.io/payment/?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F&amount=50" target="_blank" rel="noreferrer noopener">
+                <button>Donate $50</button>
+            </a>
+        </div>
+
+        <p>Project X is operational under this Raptoreum address:</p>
         <div class="raptoreum-address" id="rapt-address" onclick="copyToClipboard()">
             <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" target="_blank">RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1</a>
         </div>
         <div class="copy-text">Click to copy the address</div>
 
         <p>The Key is already in the palm of your hand - Satoshi Nakamoto</p>
-        <p>In the comment section when you donate, please drop your Raptoreum address and write 'INeedMoney.' We will send you batches of all the available tokens.</p>
-
-        <div class="donation-container">
-            <a href="https://nowpayments.io/donation?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F" target="_blank" rel="noreferrer noopener">
-                <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
-            </a>
-        </div>
-
-        <h2>How to Mine Using a Phone</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cPXrqpBi02s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <h2>Watch Our Playlist</h2>
-        <iframe src="https://www.youtube.com/embed/videoseries?list=PL4EDF0448D3DB6031" width="560" height="315" frameborder="0" allowfullscreen></iframe>
 
         <div class="footer">
             <p>@ Be Your Own Hero 2024 wallets are available here <a href="https://raptoreum.com/downloads/" target="_blank">https://raptoreum.com/downloads/</a></p>
@@ -185,13 +207,6 @@
             <a href="https://www.instagram.com/raptoreum/" target="_blank">Instagram</a> | 
             <a href="https://www.threads.net/@raptoreum" target="_blank">Threads</a> | 
             <a href="https://raptoreum.uni.eth" target="_blank">Uni</a>
-        </div>
-
-        <div class="footer">
-            <p>For more details on Raptoreum, visit the <a href="https://explorer.raptoreum.com/" target="_blank">Raptoreum Explorer</a>.</p>
-            <a href="https://github.com/Raptor3um/raptoreum" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30">
-            </a>
         </div>
     </div>
 
