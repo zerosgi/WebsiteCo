@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Project X aims to redefine the future through technology and freedom.">
-    <meta name="keywords" content="Project X, cryptocurrency, donation, Matrix, parallax, Raptoreum, Ghostrider, blockchain">
+    <meta name="keywords" content="Project X, cryptocurrency, Raptoreum, Ghostrider, blockchain">
     <meta name="author" content="Project X Team">
     <title>PROJECT X | Matrix Edition</title>
 
-    <!-- Link to destrion font -->
-    <link rel="stylesheet" href="https://example.com/destrion.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         * {
@@ -30,20 +30,11 @@
             position: fixed;
             width: 100%;
             height: 100%;
-            background-color: black;
             overflow: hidden;
             z-index: -1;
         }
-        .matrix::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(black, black 5px, transparent 5px, transparent 10px);
-            opacity: 0.9;
-        }
+
+        /* Matrix falling characters */
         .matrix span {
             position: absolute;
             top: 0;
@@ -52,10 +43,9 @@
             color: #00ff00;
             font-size: 20px;
             font-family: monospace;
-            animation: fall 5s linear infinite;
+            animation: fall linear infinite;
         }
 
-        /* Matrix falling animation */
         @keyframes fall {
             0% {
                 transform: translateY(-100%);
@@ -66,6 +56,42 @@
                 opacity: 0;
             }
         }
+
+        /* Initialize matrix rain */
+        function initMatrix() {
+            const matrix = document.querySelector('.matrix');
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            const columns = Math.floor(window.innerWidth / 20); // Adjust column size
+            const drops = Array(columns).fill(0);
+
+            for (let x = 0; x < columns; x++) {
+                const span = document.createElement('span');
+                span.textContent = chars[Math.floor(Math.random() * chars.length)];
+                span.style.left = `${x * 20}px`;
+                span.style.animationDuration = `${Math.random() * 3 + 4}s`; // Random fall speed
+                matrix.appendChild(span);
+                drops[x] = Math.floor(Math.random() * window.innerHeight); // Random starting point
+            }
+
+            function update() {
+                for (let x = 0; x < drops.length; x++) {
+                    if (drops[x] > window.innerHeight && Math.random() > 0.975) {
+                        drops[x] = 0;
+                    }
+                    drops[x]++;
+                    const span = matrix.children[x];
+                    span.style.transform = `translateY(${drops[x]}px)`;
+                    if (drops[x] > window.innerHeight) {
+                        span.textContent = chars[Math.floor(Math.random() * chars.length)];
+                    }
+                }
+                requestAnimationFrame(update);
+            }
+            update();
+        }
+
+        /* Call the initMatrix function */
+        document.addEventListener('DOMContentLoaded', initMatrix);
 
         /* Huge PROJECT X header */
         h1 {
@@ -132,6 +158,18 @@
             margin-top: 20px;
         }
 
+        /* Social media icons */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: #00ff00;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             h1 {
@@ -166,9 +204,11 @@
     <div class="content">
         <h1>PROJECT X</h1>
         <p>Welcome to Project X, the future is here. Join us in reshaping democracy through technology and blockchain. Together, we can build a future that empowers people through freedom and innovation.</p>
-        <div class="raptoreum-address">
+        
+        <!-- Raptoreum address linked to the explorer -->
+        <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" class="raptoreum-address" target="_blank">
             RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1
-        </div>
+        </a>
 
         <!-- PGP Public Key -->
         <div class="pgp-key">
@@ -182,33 +222,24 @@
             Vp3nFGI8+6NvB3U1bRjQhFTF6FR4cX7ChQ8DAQgHwngEGBYKACoFgmalDeQJ<br>
             kBWS8ugadE52ApsMFiEEDvZuHY80JJB50jqNFZLy6Bp0TnYAAClvAQCprjnq<br>
             AfsMYgyDb3/xgmx0ywIwQyB6UkeF+GhXk0of5gD9EdrHe+ghy3TkllqaUkm5<br>
-            mfPucNfXvKzzVxlgdvCD+wI=<br>
-            =Xb7j<br>
             -----END PGP PUBLIC KEY BLOCK-----
         </div>
     </div>
 
+    <!-- Footer with social media links -->
     <div class="footer">
-        <p>Contact: <a href="mailto:satoshi@vistomail.com" style="color: #00ff00;">satoshi@vistomail.com</a></p>
-        <p>© Be Your Own Hero 2024 | wallets available here <a href="https://raptoreum.com/downloads/" target="_blank" style="color: #00ff00;">Download Raptoreum Wallet</a></p>
-    </div>
-
-    <script>
-        // Create matrix rain effect by generating random green characters falling
-        function createMatrixRain() {
-            const matrix = document.querySelector('.matrix');
-            const matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        <p>Follow us on social media:</p>
+        <div class="social-icons">
             
-            for (let i = 0; i < 100; i++) {
-                const span = document.createElement('span');
-                span.textContent = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-                span.style.left = `${Math.random() * 100}vw`;
-                span.style.animationDuration = `${Math.random() * 5 + 3}s`;
-                matrix.appendChild(span);
-            }
-        }
-        createMatrixRain();
-    </script>
+            <a href="https://facebook.com/Raptoreum" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/Raptor3um/raptoreum" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/Raptoreum" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.reddit.com/r/Raptoreum/" target="_blank"><i class="fab fa-reddit"></i></a>
+            <a href="https://discord.gg/Raptoreum" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+        <p>@ Be Your Own Hero 2024 wallets are available here <a href="https://raptoreum.com/downloads/" style="color: #00ff00;">https://raptoreum.com/downloads/</a></p>
+        <p>Visit our website: <a href="https://xp0.org" target="_blank" style="color: #00ff00;">xp0.org</a></p>
+    </div>
 
 </body>
 </html>
