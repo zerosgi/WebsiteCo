@@ -3,242 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project X aims to redefine the future through technology and freedom.">
-    <meta name="keywords" content="Project X, cryptocurrency, Raptoreum, Ghostrider, blockchain">
-    <meta name="author" content="Project X Team">
-    <title>PROJECT X | Matrix Edition</title>
-
-    <!-- Font Awesome for social icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <title>Project X</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        * {
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            background-color: black;
-            position: relative;
-        }
-
-        /* Matrix rain animation */
-        .matrix {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-
-        /* Matrix falling characters */
-        .matrix span {
-            position: absolute;
-            top: 0;
-            width: 1em;
-            height: 1em;
-            color: #00ff00;
-            font-size: 20px;
-            font-family: monospace;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100%);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-        }
-
-        /* Initialize matrix rain */
-        function initMatrix() {
-            const matrix = document.querySelector('.matrix');
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-            const columns = Math.floor(window.innerWidth / 20); // Adjust column size
-            const drops = Array(columns).fill(0);
-
-            for (let x = 0; x < columns; x++) {
-                const span = document.createElement('span');
-                span.textContent = chars[Math.floor(Math.random() * chars.length)];
-                span.style.left = `${x * 20}px`;
-                span.style.animationDuration = `${Math.random() * 3 + 4}s`; // Random fall speed
-                matrix.appendChild(span);
-                drops[x] = Math.floor(Math.random() * window.innerHeight); // Random starting point
-            }
-
-            function update() {
-                for (let x = 0; x < drops.length; x++) {
-                    if (drops[x] > window.innerHeight && Math.random() > 0.975) {
-                        drops[x] = 0;
-                    }
-                    drops[x]++;
-                    const span = matrix.children[x];
-                    span.style.transform = `translateY(${drops[x]}px)`;
-                    if (drops[x] > window.innerHeight) {
-                        span.textContent = chars[Math.floor(Math.random() * chars.length)];
-                    }
-                }
-                requestAnimationFrame(update);
-            }
-            update();
-        }
-
-        /* Call the initMatrix function */
-        document.addEventListener('DOMContentLoaded', initMatrix);
-
-        /* Huge PROJECT X header */
-        h1 {
-            font-family: 'Destrion', sans-serif;
-            font-size: 96px;
-            color: #00ff00; /* Matrix green */
-            margin-bottom: 20px;
-            z-index: 1;
-        }
-
-        .content {
             text-align: center;
-            padding: 50px;
-            color: white;
-            position: relative;
-            z-index: 1;
         }
 
-        p {
-            font-size: 18px;
-            color: #d2d2d2;
-            line-height: 1.8;
-            margin-bottom: 30px;
+        header {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-top: 50px;
+            text-transform: uppercase;
         }
 
-        /* Glowing Raptoreum address */
-        .raptoreum-address {
-            background-color: #1a1a1a;
-            padding: 15px;
-            border-radius: 6px;
-            font-size: 16px;
-            color: #00ff00;
-            word-wrap: break-word;
-            display: inline-block;
-            border: 1px solid #00ff00;
-            margin-bottom: 30px;
-            animation: glow 2s infinite alternate;
-        }
-
-        /* Glow animation for the address */
-        @keyframes glow {
-            0% {
-                box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
-            }
-            100% {
-                box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 50px #00ff00, 0 0 70px #00ff00;
-            }
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            font-size: 14px;
-            color: #888;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-
-        /* Small font for public key */
-        .pgp-key {
-            font-size: 8px;
-            color: #00ff00;
-            word-wrap: break-word;
-            margin-top: 20px;
-        }
-
-        /* Social media icons */
         .social-icons {
-            margin-top: 20px;
+            margin: 20px 0;
         }
 
         .social-icons a {
-            color: #00ff00;
+            color: white;
             margin: 0 10px;
+            font-size: 2rem;
+        }
+
+        p {
+            margin: 20px;
+        }
+
+        a {
+            color: #00ff00;
             text-decoration: none;
-            font-size: 24px;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 64px;
-            }
-            p {
-                font-size: 16px;
-                margin-bottom: 40px; /* Added more space for mobile */
-            }
-            .raptoreum-address {
-                font-size: 14px;
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 48px;
-            }
-            p {
-                font-size: 14px;
-            }
+        .donation-button img {
+            width: 200px; /* Adjust the size as needed */
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Matrix animation -->
-    <div class="matrix"></div>
+    <header>Project X</header>
 
-    <!-- Main content -->
-    <div class="content">
-        <h1>PROJECT X</h1>
-        <p>Welcome to Project X, the future is here. Join us in reshaping democracy through technology and blockchain. Together, we can build a future that empowers people through freedom and innovation.</p>
-        
-        <!-- Raptoreum address linked to the explorer -->
-        <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" class="raptoreum-address" target="_blank">
-            RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1
-        </a>
+    <p>The Key is in Your Palm - Satoshi Nakamoto</p>
 
-        <!-- PGP Public Key -->
-        <div class="pgp-key">
-            -----BEGIN PGP PUBLIC KEY BLOCK-----<br>
-            xjMEZqUN5BYJKwYBBAHaRw8BAQdAhORsxioY5a7jR1j2g4bt68jwqUKfOjYe<br>
-            NOc7lo2sOozNLXNhdG9zaGlAdmlzdG9tYWlsLmNvbSA8c2F0b3NoaUB2aXN0<br>
-            b21haWwuY29tPsKMBBAWCgA+BYJmpQ3kBAsJBwgJkBWS8ugadE52AxUICgQW<br>
-            AAIBAhkBApsDAh4BFiEEDvZuHY80JJB50jqNFZLy6Bp0TnYAAHiBAQCB0luq<br>
-            WWzP0qwkL/ydtlEVnGS/nW0VIiBTS94/rw4+awEAo00kIP7erP8R4RXRkixk<br>
-            FVT52W8pjQ4iqKuNrTMxkAXOOARmpQ3kEgorBgEEAZdVAQUBAQdAyEq8PTeI<br>
-            Vp3nFGI8+6NvB3U1bRjQhFTF6FR4cX7ChQ8DAQgHwngEGBYKACoFgmalDeQJ<br>
-            kBWS8ugadE52ApsMFiEEDvZuHY80JJB50jqNFZLy6Bp0TnYAAClvAQCprjnq<br>
-            AfsMYgyDb3/xgmx0ywIwQyB6UkeF+GhXk0of5gD9EdrHe+ghy3TkllqaUkm5<br>
-            -----END PGP PUBLIC KEY BLOCK-----
-        </div>
+    <div class="social-icons">
+        <a href="https://twitter.com/Raptoreum" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://facebook.com/Raptoreum" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/Raptor3um/raptoreum" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/Raptoreum" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.reddit.com/r/Raptoreum/" target="_blank"><i class="fab fa-reddit"></i></a>
+        <a href="https://discord.gg/Raptoreum" target="_blank"><i class="fab fa-discord"></i></a>
     </div>
 
-    <!-- Footer with social media links -->
-    <div class="footer">
-        <p>Follow us on social media:</p>
-        <div class="social-icons">
-            
-            <a href="https://facebook.com/Raptoreum" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://github.com/Raptor3um/raptoreum" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://t.me/Raptoreum" target="_blank"><i class="fab fa-telegram"></i></a>
-            <a href="https://www.reddit.com/r/Raptoreum/" target="_blank"><i class="fab fa-reddit"></i></a>
-            <a href="https://discord.gg/Raptoreum" target="_blank"><i class="fab fa-discord"></i></a>
-        </div>
-        <p>@ Be Your Own Hero 2024 wallets are available here <a href="https://raptoreum.com/downloads/" style="color: #00ff00;">https://raptoreum.com/downloads/</a></p>
-        <p>Visit our website: <a href="https://xp0.org" target="_blank" style="color: #00ff00;">xp0.org</a></p>
+    <p>@ Be Your Own Hero 2024 wallets are available here <a href="https://raptoreum.com/downloads/">https://raptoreum.com/downloads/</a></p>
+
+    <p>Visit our website: <a href="https://xp0.org" target="_blank">xp0.org</a></p>
+
+    <!-- Donation Button -->
+    <div class="donation-button">
+        <a href="https://nowpayments.io/donation?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F" target="_blank" rel="noreferrer noopener">
+            <img src="https://nowpayments.io/images/embeds/donation-button-white.svg" alt="Cryptocurrency & Bitcoin donation button by NOWPayments">
+        </a>
     </div>
 
 </body>
