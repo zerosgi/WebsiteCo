@@ -3,104 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Satoshi for Raptoreum</title>
+    <title>Satoshi's Bitcoin Sale - Buy Direct</title>
     <style>
         body {
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
         }
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
         }
         h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
-        .header-image {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-        }
-        .content {
+        .package {
             margin: 20px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
             font-size: 1.2em;
-            line-height: 1.6em;
         }
-        .video-section {
-            margin: 20px 0;
+        .price {
+            font-size: 1.5em;
+            color: #00ff00;
         }
-        iframe {
-            width: 100%;
-            height: 500px;
-        }
-        .footer {
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: lightgray;
-        }
-        .social-icons {
-            margin-top: 20px;
-        }
-        .social-icons img {
-            width: 40px;
-            margin: 0 10px;
-        }
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            iframe {
-                height: 300px;
-            }
+        .buy-btn {
+            padding: 10px 20px;
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Satoshi for Raptoreum</h1>
-        <img src="2_big.jpg" alt="Header Image" class="header-image">
-        
-        <div class="content">
-            <p>You know I’m going to disrupt the Bitcoin devs. They’ve completely ruined my vision, my brain, and my ability to leave this nonsense behind. My name is Alex Elbanna. If you want to find me, it’s not hard. My email is jetskirentals@pm.me.</p>
-            
-            <p>I work with the GhostRider algorithm now because it's what I wanted from the beginning. I wanted everyone to mine from a smartphone because they're addictive. And I was right. Raptoreum is great— the poorest people in the world can mine it. Even though I’m imprisoned, I’m still going to find another way besides Bitcoin.</p>
+        <h1>Buy Bitcoin Directly at Market Price - No Fee</h1>
 
-            <p>Bitcoin is for pros, but it has flaws, like not being ASIC-resistant. If you’re an average person, start mining with Raptoreum and send your address to my email. I’ve created a bunch of assets I want to share with everyone. My Raptoreum address is RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1.</p>
+        <p>Satoshi is selling out of Bitcoin and moving to Raptoreum. Select a package to buy Bitcoin directly at the market price. Prices will be calculated based on the current Bitcoin market value.</p>
 
-            <p>I’m building a new digital playbook by launching assets under my Raptoreum address. Some donations would be cool, too. I’m broke after trying to figure out how the SEC works, along with all the legal bills, and the exchange source code.</p>
-            
-            <p>Stop showing up at my doorstep asking for interviews. You had your chance. Email me, and if I like what I see, I’ll email back.</p>
-            
-            <p>TRUMP 2024: Making Men Men Again. Enough with the bullshit—let’s all get rich together with Raptoreum and my 100+ assets.</p>
-
-            <p>I lost our house due to bills and Hurricane Helene. We lost everything in the floods. I live in my dad’s office now while my future ex-wife sleeps upstairs, waiting for me to dig us out financially. Hurry up and donate so I can pay for this damn divorce and make us rich.</p>
+        <div class="package">
+            <h2>Package 1: 100 Bitcoins</h2>
+            <p>Buy 100 Bitcoins directly at market price.</p>
+            <p class="price" id="price1">$0.00</p>
+            <button class="buy-btn" onclick="generateInvoice(100)">Buy 100 BTC</button>
         </div>
 
-        <div class="video-section">
-            <iframe src="https://youtube.com/embed/YZuHlgOEzEQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <p>Subscribe to my YouTube channel!</p>
+        <div class="package">
+            <h2>Package 2: 250 Bitcoins</h2>
+            <p>Buy 250 Bitcoins directly at market price.</p>
+            <p class="price" id="price2">$0.00</p>
+            <button class="buy-btn" onclick="generateInvoice(250)">Buy 250 BTC</button>
         </div>
 
-        <div class="social-icons">
-            <a href="https://raptoreum.com"><img src="raptoreum-logo.png" alt="Raptoreum"></a>
-            <a href="https://github.com/Raptor3um/raptoreum"><img src="github-logo.png" alt="GitHub"></a>
-            <a href="https://twitter.com/raptoreum"><img src="twitter-logo.png" alt="Twitter"></a>
-        </div>
-
-        <div class="footer">
-            <p>That's Financial Advice not registered with the SEC—please get rich on my advice, Alex Elbanna. To be clear, you will get rich on Raptoreum.</p>
-            <p>I don't recommend an attorney because they’re just leeches. And I have access to satoshi@vistomail.com, but I hate it and prefer jetskirentals@pm.me.</p>
-            <p>Alex Elbanna thanks those who support. Fuck you, haters. Those who hate can't do.</p>
+        <div class="package">
+            <h2>Package 3: 500 Bitcoins</h2>
+            <p>Buy 500 Bitcoins directly at market price.</p>
+            <p class="price" id="price3">$0.00</p>
+            <button class="buy-btn" onclick="generateInvoice(500)">Buy 500 BTC</button>
         </div>
     </div>
+
+    <script>
+        // Fetch Bitcoin Market Price
+        const fetchBitcoinPrice = async () => {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+                const data = await response.json();
+                const btcPrice = data.bitcoin.usd;
+                document.getElementById('price1').innerText = `$${(btcPrice * 100).toLocaleString()}`;
+                document.getElementById('price2').innerText = `$${(btcPrice * 250).toLocaleString()}`;
+                document.getElementById('price3').innerText = `$${(btcPrice * 500).toLocaleString()}`;
+            } catch (error) {
+                console.error('Error fetching BTC price:', error);
+            }
+        };
+
+        // Run the fetchBitcoinPrice on page load
+        window.onload = fetchBitcoinPrice;
+
+        // Function to Generate Invoice
+        function generateInvoice(bitcoins) {
+            const btcToUsd = {
+                100: document.getElementById('price1').innerText,
+                250: document.getElementById('price2').innerText,
+                500: document.getElementById('price3').innerText
+            };
+            const invoiceAmount = btcToUsd[bitcoins].replace(/\$|,/g, '');
+
+            // Generate an invoice using NowPayments or similar API
+            window.open(`https://nowpayments.io/invoice?amount=${invoiceAmount}&currency=USD`, '_blank');
+        }
+    </script>
 
 </body>
 </html>
