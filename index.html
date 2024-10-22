@@ -40,6 +40,36 @@
             margin-bottom: 20px;
         }
 
+        .donate-section {
+            margin-top: 50px;
+        }
+
+        .donate-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .donate-section p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .donate-button {
+            background-color: #00ff00;
+            color: black;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .donate-button:hover {
+            background-color: #33cc33;
+        }
+
         footer {
             margin-top: 40px;
         }
@@ -59,7 +89,6 @@
             document.getElementById('rtm-price').innerText = `Current Price of RTM: $${rtmPrice} USD`;
         }
 
-        // Run the function on page load to get the RTM price
         window.onload = getRTMPrice;
     </script>
 </head>
@@ -71,6 +100,15 @@
     <div class="price-box">
         <h2>Raptoreum (RTM) Price</h2>
         <p id="rtm-price">Loading price...</p>
+    </div>
+
+    <!-- Donate Section -->
+    <div class="donate-section">
+        <h2>Support Our Project</h2>
+        <p>Donate $5 to our project and get VIP access to exclusive content and updates.</p>
+        <a href="https://nowpayments.io/donation/projectx" target="_blank">
+            <button class="donate-button">Donate Now</button>
+        </a>
     </div>
 
     <p>@ Be Your Own Hero 2024 wallets are available here <a href="https://raptoreum.com/downloads/" style="color:#00ff00;">https://raptoreum.com/downloads/</a></p>
