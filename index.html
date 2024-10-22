@@ -61,15 +61,18 @@
         }
         .raptoreum-address {
             margin: 20px 0;
-            font-size: 1.2em;
+            font-size: 1.5em;
             color: #0f0; /* Monster Energy green */
-        }
-        .raptoreum-address a {
-            color: #0f0;
+            padding: 10px 20px;
+            border: 2px solid #0f0;
+            border-radius: 5px;
+            display: inline-block;
             text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0; /* Glowing effect */
         }
-        .raptoreum-address a:hover {
-            text-decoration: underline;
+        .raptoreum-address:hover {
+            box-shadow: 0 0 20px #0f0, 0 0 30px #0f0, 0 0 40px #0f0; /* Enhanced glow on hover */
         }
         @media (max-width: 768px) {
             h1 {
@@ -94,11 +97,9 @@
 
             <p>Bitcoin is for pros, but it has flaws, like not being ASIC-resistant. If you’re an average person, start mining with Raptoreum and send your address to my email. I’ve created a bunch of assets I want to share with everyone. My Raptoreum address is:</p>
 
-            <div class="raptoreum-address">
-                <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" target="_blank">
-                    RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1
-                </a>
-            </div>
+            <a href="https://explorer.raptoreum.com/address/RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1" target="_blank" class="raptoreum-address">
+                RUsTFr3gvo93KwFbEji58iMKBW1yb8rzh1
+            </a>
 
             <p>I’m building a new digital playbook by launching assets under my Raptoreum address. Some donations would be cool, too. I’m broke after trying to figure out how the SEC works, along with all the legal bills, and the exchange source code.</p>
             
