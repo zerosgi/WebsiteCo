@@ -3,185 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project X - A platform supporting the Raptoreum project with VIP access and information on cryptocurrency.">
-    <meta name="keywords" content="Raptoreum, cryptocurrency, Project X, VIP access, RTM, digital currency, blockchain">
-    <meta name="author" content="Alex Elbanna">
-    <title>Project X - Raptoreum</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="description" content="Raptoreum - The Future of CPU Mining and Satoshi Nakamoto's Vision">
+    <meta name="keywords" content="Raptoreum, CPU Mining, Ghostrider Algorithm, Cryptocurrency, Satoshi Nakamoto, Project X">
+    <title>Project X - The Key is in Your Palm</title>
     <style>
         body {
-            background-color: black;
-            color: white;
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: black;
+            font-family: 'Arial', sans-serif;
+            color: white;
             text-align: center;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
-        header {
-            font-size: 4rem;
+        h1 {
+            font-size: 5em;
             font-weight: bold;
-            margin-top: 50px;
-            text-transform: uppercase;
+            margin-top: 20px;
         }
 
-        .price-box, .info-box {
-            padding: 20px;
+        h2 {
+            margin-top: 50px;
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.2em;
             margin: 20px auto;
-            max-width: 400px;
-        }
-
-        .price-box h2, .info-box h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .price-box p, .info-box p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .vip-section {
-            margin-top: 50px;
-        }
-
-        .vip-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .vip-section p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            max-width: 800px;
         }
 
         .trophy-section {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        .trophy {
+            margin: 40px auto;
+            padding: 20px;
+            border: 2px solid #fff;
+            width: fit-content;
             text-align: center;
         }
 
-        .trophy i {
-            font-size: 5rem;
-            color: #00ff00;
+        .trophy-section h3 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
         }
 
-        .trophy p {
-            margin-top: 10px;
-            font-size: 1.2rem;
+        .trophy-section p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
 
-        .vip-button {
-            background-color: #00ff00;
-            color: black;
+        .btn {
             padding: 15px 30px;
-            font-size: 1.5rem;
-            font-weight: bold;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 1.5em;
             border: none;
-            border-radius: 5px;
-            text-transform: uppercase;
             cursor: pointer;
         }
 
-        .vip-button:hover {
-            background-color: #33cc33;
+        .btn:hover {
+            background-color: #218838;
         }
 
-        footer {
-            margin-top: 40px;
-        }
-
-        footer a {
-            margin: 0 15px;
-            font-size: 1.5rem;
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: black;
             color: white;
+            font-size: 1em;
         }
 
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            header {
-                font-size: 2.5rem;
+        .footer a {
+            color: #1e90ff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 3em;
             }
 
-            .price-box h2, .info-box h2 {
-                font-size: 1.5rem;
+            p {
+                font-size: 1em;
+                max-width: 90%;
             }
 
-            .price-box p, .info-box p {
-                font-size: 1rem;
-            }
-
-            .vip-section h2 {
-                font-size: 2rem;
-            }
-
-            .vip-button {
-                font-size: 1.2rem;
-                padding: 10px 20px;
+            .footer {
+                font-size: 0.8em;
             }
         }
     </style>
-    <script>
-        async function getRTMPrice() {
-            const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=raptoreum&vs_currencies=usd');
-            const data = await response.json();
-            const rtmPrice = data.raptoreum.usd;
-            document.getElementById('rtm-price').innerText = `Current Price of RTM: $${rtmPrice} USD`;
-        }
-
-        window.onload = getRTMPrice;
-    </script>
 </head>
 <body>
+    <header>
+        <h1>PROJECT X</h1>
+        <p>The Key is in Your Palm - Satoshi Nakamoto</p>
+    </header>
 
-    <header>Project X</header>
+    <section class="trophy-section">
+        <h3>VIP Participation Trophy</h3>
+        <p>Donate $15 to the Raptoreum Project and get a VIP Participation Trophy</p>
+        <a href="https://nowpayments.io/donation/projectx" class="btn">Buy Now</a>
+        <p>Make sure to leave your Raptoreum address in the comment section so I can send your trophy!</p>
+    </section>
 
-    <!-- RTM Price Section -->
-    <div class="price-box">
-        <h2>Raptoreum (RTM) Price</h2>
-        <p id="rtm-price">Loading price...</p>
-    </div>
-
-    <!-- Raptoreum Explanation Section -->
-    <div class="info-box">
+    <section>
         <h2>What is Raptoreum?</h2>
-        <p>Raptoreum is a decentralized cryptocurrency that uses a unique GhostRider algorithm to ensure fair mining and transactions. Built on the principles of one CPU, one vote, Raptoreum aims to empower users by providing a secure and efficient platform for digital currency transactions.</p>
-    </div>
+        <p>Raptoreum brings Satoshi Nakamoto’s vision of a decentralized, CPU-minable cryptocurrency to life with its innovative Ghostrider algorithm. It ensures that anyone with a CPU can mine and contribute to the network, making mining accessible and rewarding to everyone. With Raptoreum, the power lies in your hands—just like Satoshi envisioned: one CPU, one vote.</p>
+        <p>By participating, you will receive not just the VIP Participation Trophy, but also a variety of tokens that will be paired and traded by 2025. You will be at the forefront of this revolutionary movement, competing directly with Bitcoin!</p>
+    </section>
 
-    <!-- VIP Trophy Section -->
-    <div class="vip-section">
-        <h2>Get a VIP Participation Trophy for Raptoreum Project</h2>
-        <p>Support our project and receive exclusive VIP access, along with a trophy, for just $6.</p>
-        <div class="trophy-section">
-            <div class="trophy">
-                <i class="fas fa-trophy"></i> <!-- Trophy Icon -->
-                <p>VIP Participation Trophy</p>
-            </div>
-        </div>
-        <p>Make sure to leave your Raptoreum address in the comment section before purchase so I can send your trophy!</p>
-        <a href="https://nowpayments.io/donation/projectx" target="_blank">
-            <button class="vip-button">Buy VIP Trophy for $6</button>
-        </a>
-    </div>
-
-    <p>@ Be Your Own Hero 2024 wallets are available here <a href="https://raptoreum.com/downloads/" style="color:#00ff00;">https://raptoreum.com/downloads/</a></p>
-
-    <footer>
-        <!-- Social Media Links -->
-        <a href="https://www.facebook.com/raptoreum/" target="_blank"><i class="fab fa-facebook" style="color:white;"></i></a>
-        <a href="https://twitter.com/raptoreum" target="_blank"><i class="fab fa-twitter" style="color:white;"></i></a>
-        <a href="https://www.youtube.com/@RaptoreumOfficial" target="_blank"><i class="fab fa-youtube" style="color:white;"></i></a>
-        <a href="https://www.linkedin.com/company/raptoreum/" target="_blank"><i class="fab fa-linkedin" style="color:white;"></i></a>
-        <a href="https://t.me/raptoreumm" target="_blank"><i class="fab fa-telegram" style="color:white;"></i></a>
-        <a href="https://www.instagram.com/raptoreum/" target="_blank"><i class="fab fa-instagram" style="color:white;"></i></a>
-        <a href="https://www.threads.net/@raptoreum" target="_blank"><i class="fab fa-threads" style="color:white;"></i></a>
-        <a href="https://raptoreum.uni.eth" target="_blank"><i class="fab fa-ethereum" style="color:white;"></i></a>
+    <footer class="footer">
+        <p>Follow Raptoreum on:</p>
+        <a href="https://www.facebook.com/raptoreum/">Facebook</a>
+        <a href="https://twitter.com/raptoreum">Twitter</a>
+        <a href="https://www.youtube.com/@RaptoreumOfficial">YouTube</a>
+        <a href="https://www.linkedin.com/company/raptoreum/">LinkedIn</a>
+        <a href="https://t.me/raptoreumm">Telegram</a>
+        <a href="https://www.instagram.com/raptoreum/">Instagram</a>
+        <a href="https://www.threads.net/@raptoreum">Threads</a>
+        <a href="https://raptoreum.uni.eth">Uni</a>
+        <p>Contact: <a href="mailto:satoshi@vistomail.com">satoshi@vistomail.com</a></p>
     </footer>
-
 </body>
 </html>
