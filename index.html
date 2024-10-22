@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project X - A platform supporting the Raptoreum project with VIP access and information on cryptocurrency.">
+    <meta name="keywords" content="Raptoreum, cryptocurrency, Project X, VIP access, RTM, digital currency, blockchain">
+    <meta name="author" content="Alex Elbanna">
     <title>Project X - Raptoreum</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
@@ -13,6 +16,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         header {
@@ -22,19 +26,19 @@
             text-transform: uppercase;
         }
 
-        .price-box {
+        .price-box, .info-box {
             padding: 20px;
             margin: 20px auto;
             max-width: 400px;
         }
 
-        .price-box h2 {
+        .price-box h2, .info-box h2 {
             font-size: 2rem;
             margin-bottom: 10px;
         }
 
-        .price-box p {
-            font-size: 1.5rem;
+        .price-box p, .info-box p {
+            font-size: 1.2rem;
             margin-bottom: 20px;
         }
 
@@ -52,23 +56,22 @@
             margin-bottom: 20px;
         }
 
-        .badge-trophy-section {
+        .trophy-section {
             display: flex;
             justify-content: center;
             margin-bottom: 30px;
         }
 
-        .badge, .trophy {
-            margin: 0 20px;
+        .trophy {
             text-align: center;
         }
 
-        .badge i, .trophy i {
+        .trophy i {
             font-size: 5rem;
             color: #00ff00;
         }
 
-        .badge p, .trophy p {
+        .trophy p {
             margin-top: 10px;
             font-size: 1.2rem;
         }
@@ -99,6 +102,29 @@
             color: white;
         }
 
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header {
+                font-size: 2.5rem;
+            }
+
+            .price-box h2, .info-box h2 {
+                font-size: 1.5rem;
+            }
+
+            .price-box p, .info-box p {
+                font-size: 1rem;
+            }
+
+            .vip-section h2 {
+                font-size: 2rem;
+            }
+
+            .vip-button {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+        }
     </style>
     <script>
         async function getRTMPrice() {
@@ -121,22 +147,24 @@
         <p id="rtm-price">Loading price...</p>
     </div>
 
-    <!-- VIP Badge and Trophy Section -->
+    <!-- Raptoreum Explanation Section -->
+    <div class="info-box">
+        <h2>What is Raptoreum?</h2>
+        <p>Raptoreum is a decentralized cryptocurrency that uses a unique GhostRider algorithm to ensure fair mining and transactions. Built on the principles of one CPU, one vote, Raptoreum aims to empower users by providing a secure and efficient platform for digital currency transactions.</p>
+    </div>
+
+    <!-- VIP Trophy Section -->
     <div class="vip-section">
-        <h2>Get a VIP Badge & Trophy for Raptoreum Project</h2>
-        <p>Support our project and receive exclusive VIP access, along with a badge and trophy, for just $6.</p>
-        <div class="badge-trophy-section">
-            <div class="badge">
-                <i class="fas fa-award"></i> <!-- Badge Icon -->
-                <p>VIP Badge</p>
-            </div>
+        <h2>Get a VIP Trophy for Raptoreum Project</h2>
+        <p>Support our project and receive exclusive VIP access, along with a trophy, for just $6.</p>
+        <div class="trophy-section">
             <div class="trophy">
                 <i class="fas fa-trophy"></i> <!-- Trophy Icon -->
                 <p>VIP Trophy</p>
             </div>
         </div>
         <a href="https://nowpayments.io/donation/projectx" target="_blank">
-            <button class="vip-button">Buy VIP Badge & Trophy for $6</button>
+            <button class="vip-button">Buy VIP Trophy for $6</button>
         </a>
     </div>
 
