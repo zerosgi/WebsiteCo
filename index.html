@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project X - Buy RTM</title>
+    <title>Project X - Raptoreum</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
@@ -40,15 +40,16 @@
             margin-bottom: 20px;
         }
 
-        .buy-button {
-            background-color: #00ff00;
-            color: black;
-            font-size: 1.5rem;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        footer {
+            margin-top: 40px;
         }
+
+        footer a {
+            margin: 0 15px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
     </style>
     <script>
         async function getRTMPrice() {
@@ -68,13 +69,8 @@
 
     <!-- RTM Price Section -->
     <div class="price-box">
-        <h2>Buy Raptoreum (RTM)</h2>
+        <h2>Raptoreum (RTM) Price</h2>
         <p id="rtm-price">Loading price...</p>
-        <p>Buy 10,000 RTM for $5.00 USD</p>
-        <!-- NowPayments Buy Button -->
-        <a href="https://nowpayments.io/payment/?api_key=QA5Z1YY-SV2MF3Y-PHKEZM3-BC04V6F&amount=5.00&currency=usd&order_id=10000RTM&description=Buying 10,000 Raptoreum" target="_blank" rel="noreferrer noopener">
-            <button class="buy-button">Buy Now</button>
-        </a>
     </div>
 
     <p>@ Be Your Own Hero 2024 wallets are available here <a href="https://raptoreum.com/downloads/" style="color:#00ff00;">https://raptoreum.com/downloads/</a></p>
