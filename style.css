@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 50px;
+}
+
+#intro {
+  margin: 50px auto;
+  max-width: 600px;
+}
+
+button {
+  padding: 15px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #00A3E0; /* Raptoreum color */
+}
